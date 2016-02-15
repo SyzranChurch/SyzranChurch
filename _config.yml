@@ -17,19 +17,20 @@ avatar: # Лого СХЦ!
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
   email: syzranchurch@gmail.com
-  facebook:
-  flickr:
   github: SyzranChurch/syzranchurch.github.io
+  googleplus: 107423358717039575434 # anything in your profile username that comes after plus.google.com/
   instagram:
-  linkedin:
-  pinterest:
   rss: # just type anything here for a working RSS icon
   twitter:
-  stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
-  youtube: https://www.youtube.com/channel/UC4gFq3gTpR7mt--_8AUvkTA # channel/<your_long_string> or user/<user-name>
-  googleplus: https://plus.google.com/107423358717039575434 # anything in your profile username that comes after plus.google.com/
+  vk: club6771692
+  youtube: UC4gFq3gTpR7mt--_8AUvkTA # channel/<your_long_string> or user/<user-name>
+  # dribbble:
+  # facebook:
+  # flickr:
+  # linkedin:
+  # pinterest:
+  # stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
