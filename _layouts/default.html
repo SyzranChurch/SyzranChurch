@@ -1,52 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
-
     {% include meta.html %}
-
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <!-- Let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+<body>
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ site.baseurl }}/js/init.js"></script>
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Главная</a>
-            <!-- <a href="{{ site.baseurl }}/about">About</a> -->
-            <a href="http://54.86.179.248">OneBody</a>
-          </nav>
-        </header>
-      </div>
-    </div>
+    <nav>
+        <div class="nav-wrapper light-blue darken-3">
+            <ul class="left">
+                <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            </ul>
+            <a href="{{ site.baseurl }}/" class="brand-logo hide-on-med-and-down">{{ site.name }}</a>
+            <a href="{{ site.baseurl }}/" class="brand-logo hide-on-large-only">СХЦ</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ site.baseurl }}/">Главная</a></li>
+                <!-- <li><a href="{{ site.baseurl }}/служения">Служения</a></li> -->
+                <li><a href="http://54.86.179.248">OneBody</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile">
+                <li><a href="{{ site.baseurl }}/">Главная</a></li>
+                <!-- <li><a href="{{ site.baseurl }}/служения">Служения</a></li> -->
+                <li><a href="http://54.86.179.248">OneBody</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div id="main" role="main" class="container">
-      {{ content }}
+        {{ content }}
     </div>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+    <footer class="page-footer light-blue darken-3">
+        <div class="container">
+            <div class="row">
+                <div class="col l8 m8 s12">
+                    <h5 class="white-text">{{ site.name }}</h5>
+                    <ul>
+                      <li class="white-text">{{ site.description }}</li>
+                    </ul>
+                    <ul>
+                      <li class="white-text">Адрес:</li>
+                      <li class="white-text">Г. Сызрань, Ладожская, 24</li>
+                    </ul>
+                </div>
+                <div class="col l4 m4 s12">
+                    <h5 class="white-text">Контакты</h5>
+                    <ul>
+                        <li class="white-text">Пастора:</li>
+                        <li class="white-text">+7-927-021-32-44 (Дмитрий)</li>
+                        <li class="white-text">+7-927-895-32-24 (Ольга)</li>
+                    </ul>
+                    <ul>
+                        <li class="white-text">Вопросы и предложения по сайту:</li>
+                        <li class="white-text">+7-927-021-33-38 (Павел)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            {% include svg-icons.html %}
+        </div>
+    </footer>
 
     {% include analytics.html %}
-  </body>
+</body>
+
 </html>
